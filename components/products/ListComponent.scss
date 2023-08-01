@@ -1,0 +1,73 @@
+$font: sans-serif;
+$Color_Components: rgb(83, 83, 83);
+$Color_Text:rgb(139, 139, 139);
+$Border_Color:rgb(29, 17, 17);
+$Background_Color:(rgb(27, 27, 32),rgb(37, 27, 27));
+
+body{
+    background:linear-gradient($Background_Color) ;
+}
+.Border{
+    border-color:$Border_Color,;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 8px;
+   
+}
+
+.Center{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.Post{
+    display: grid;
+    @extend .Center
+}
+
+.Body{
+
+    transition: background-color, border-color , .9s;
+    background-color:$Color_Components;
+    padding:10px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 360px;
+    max-height: 800px;
+    @extend .Border;
+
+    h2{
+        font-family: $font;
+        font-weight: bold;
+        color:$Color_Text;
+    }
+
+    p{
+        font-family: $font;
+        color:$Color_Text;
+        padding-bottom:30px;
+    }
+
+    &:hover { 
+        background-color:rgb(114, 114, 114) ;
+        color:rgb(255, 255, 255)!important;
+        border-color:rgb(63, 37, 37);
+
+        p{
+            color: rgb(255, 255, 255)!important;
+            transition: color  .9s;
+        }
+
+        h2{
+            color:rgb(255, 255, 255)!important;
+            transition: color  .9s;
+        }
+    }
+      
+}
+body{
+    margin:0px;
+    padding: 0px;
+    top:0px;
+}

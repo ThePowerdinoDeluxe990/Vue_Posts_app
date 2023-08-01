@@ -1,0 +1,28 @@
+$Color_Background:rgb(36, 34, 34);
+$Secondary_Background:rgb(87, 87, 87);
+$Font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Head{
+
+    transition: background-color .7s;
+    top:0;
+    position: sticky;
+    background-color: $Color_Background;
+    min-height: 75px;
+    h1{
+        color:white;
+        padding:20px;
+        font-family: $Font;
+    }
+
+    &:hover{
+        background-color: $Secondary_Background;
+      
+    }
+}
+
